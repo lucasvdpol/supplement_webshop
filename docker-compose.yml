@@ -16,6 +16,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
+    env_file:
+      - FFS_backend/.env
     depends_on:
       - db
     environment:
