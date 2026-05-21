@@ -1,0 +1,75 @@
+{
+  "homepage": {
+    "adminPanel": "Admin Paneel",
+    "allProducts": "Alle Producten",
+    "category": "Categorieën",
+    "searchBar": "Zoek producten..."
+  },
+  "shoppingcart":{
+    "shoppingcartText": "Je winkelmand is nog leeg!",
+    "order": "Bestellen"
+  },
+  "order": {
+    "orderText": "Bestellen",
+    "orderDetails": "Gegevens",
+    "delivery": "Bezorging",
+    "firstname": "Voornaam",
+    "lastname": "Achternaam",
+    "address": "Straat en huisnummer",
+    "city": "Stad",
+    "products": "Producten",
+    "emptyCart": "Voeg producten toe om ze te bestellen!",
+    "sentTo": "Verzonden naar:",
+    "orderDate": "Bestelling van: ",
+    "total": "Totaal",
+    "finishedOrder": {
+      "h1": "Bedankt voor je bestelling!",
+      "p": "Als je een account hebt aangemaakt kun je je bestellingen terugzien!"
+    }
+  },
+  "product": {
+    "text": "Producten",
+    "addToCart": "Toevoegen",
+    "addedToCart": "Toegevoegd",
+    "size": "Inhoud",
+    "portions": "Porties",
+    "proteinPerPortion": "Proteïne per portie",
+    "ingredients": "Ingrediënten"
+  },
+  "account": {
+    "logOut": "Uitloggen",
+    "orders": "Bestellingen"
+  },
+  "adminPanel": {
+    "header": "Admin Paneel",
+    "changeProduct":{
+      "pick": "Kies een product",
+      "text": "Product Aanpassen",
+      "currentTaste": "Smaak ",
+      "currentBrand": "Merk ",
+      "currentCategory": "Categorie ",
+      "currentPrice": "Prijs ",
+      "currentUrl": "URL ",
+      "currentStock": "Voorraad ",
+      "currentIngredients": "Ingrediënten ",
+      "currentAmount": "Gewicht ",
+      "currentProteinPerPortion": "Proteïne per Portie ",
+      "change": "Aanpassen"
+    },
+    "addCategory": {
+      "text": "Categorie Toevoegen",
+      "name": "Naam van de nieuwe categorie",
+      "category": "Categorie",
+      "create": "Aanmaken"
+    },
+    "removeProduct": {
+      "text": "Product Verwijderen",
+      "confirm": "Ik bevestig dat ik dit product wil verwijderen",
+      "delete": "Verwijderen"
+    },
+    "addProduct": {
+      "text": "Product Toevoegen"
+
+    }
+  }
+}

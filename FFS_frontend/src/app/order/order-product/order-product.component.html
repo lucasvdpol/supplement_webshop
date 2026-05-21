@@ -1,0 +1,12 @@
+<div class="product-card">
+  <img [src]="imagePath"
+       [alt]="orderline.product.category.name + ' met de smaak ' + orderline.product.taste"/>
+  <div class="info">
+    <p>{{orderline.product.taste}}</p>
+    <p>{{orderline.amount}}x</p>
+  </div>
+  <div class="subtotal">
+    <p>€{{orderline.subtotal.toFixed(2)}}</p>
+  </div>
+
+</div>

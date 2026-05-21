@@ -1,0 +1,135 @@
+@use '../../styles.scss' as *;
+
+header {
+  background: linear-gradient(90deg, $primary, $secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  height: 4rem;
+  position: relative;
+  z-index: 100;
+
+  button {
+    background: transparent;
+    color: $white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: none;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: rgba($white, 0.1);
+    }
+  }
+
+  .text-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    align-items: center;
+    height: auto;
+    min-height: 100%;
+
+    .categories-dropdown {
+      position: relative;
+      overflow: visible;
+      min-width: max-content;
+      height: 100%;
+      z-index: 1001;
+
+      .category-button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: $white;
+
+        .arrow {
+          transition: transform 0.3s ease;
+        }
+      }
+
+      &:hover {
+        .arrow {
+          transform: rotate(180deg);
+        }
+
+        .dropdown-content {
+          display: block;
+        }
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $background;
+        min-width: 12rem;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        z-index: 1100;
+
+        button {
+          width: 100%;
+          font-size: 1.2rem;
+          text-align: left;
+          padding: 0.5rem 1rem;
+          margin: 0.25rem 0;
+          background-color: $background;
+          color: $primary-dark;
+          border-radius: 0.3rem;
+
+          &:hover {
+            background-color: $primary-very-light;
+          }
+        }
+      }
+    }
+  }
+  .nav-container {
+    display: flex;
+    gap: 1rem;
+    right: 0;
+    margin-left: auto;
+    align-items: center;
+  }
+}
+
+@media(max-width: 720px){
+  header{
+    overflow: visible;
+    position: relative;
+
+    .text-container{
+      overflow-x: auto ;
+      overflow-y: visible;
+      scrollbar-width: none;
+
+      .categories-dropdown {
+        position: static;
+        .dropdown-content {
+          position: absolute;
+          top: 3rem;
+          left: 1rem;
+          right: 1rem;
+          z-index: 1100;
+          transition: opacity 0.2s, visibility 0.5s;
+        }
+        p{
+          display: none;
+        }
+      }
+
+      button{
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<h1 class="titleClass">{{'adminPanel.changeProduct.text' | translate}}</h1>
+<div class="form">
+  @if(this.product){
+    <form [formGroup]="changeProductForm" (ngSubmit)="onChangeProduct()">
+      <label>Product ID: {{product.id}}</label>
+      <label>{{'adminPanel.changeProduct.currentTaste' | translate}}: {{product.taste}}</label>
+      <input type="text" [attr.placeholder]="'adminPanel.changeProduct.currentTaste' | translate" formControlName="taste">
+
+      <label>{{'adminPanel.changeProduct.currentBrand' | translate}}: {{product.brand}}</label>
+      <input type="text"[attr.placeholder]="'adminPanel.changeProduct.currentBrand' | translate" formControlName="brand">
+
+      <label>{{'adminPanel.changeProduct.currentCategory' | translate}}: {{product.category.name}}</label>
+      <input type="text" [attr.placeholder]="'adminPanel.changeProduct.currentCategory' | translate" formControlName="category">
+
+      <label>{{'adminPanel.changeProduct.currentPrice' | translate}}: €{{product.price.toFixed(2)}}</label>
+      <input type="text" [attr.placeholder]="'adminPanel.changeProduct.currentPrice' | translate" formControlName="price">
+
+      <label>{{'adminPanel.changeProduct.currentUrl' | translate}}: {{product.url}}</label>
+      <input type="text" [attr.placeholder]="'adminPanel.changeProduct.currentUrl' | translate" formControlName="url">
+
+      <label>{{'adminPanel.changeProduct.currentStock' | translate}}: {{product.stock}}</label>
+      <input type="text" [attr.placeholder]="'adminPanel.changeProduct.currentStock' | translate" formControlName="stock">
+
+      <label>{{'adminPanel.changeProduct.currentIngredients' | translate}}: {{product.ingredients}}</label>
+      <input type="text" [attr.placeholder]="'adminPanel.changeProduct.currentIngredients' | translate" formControlName="ingredients">
+
+      <label>{{'adminPanel.changeProduct.currentAmount' | translate}}: {{product.amountInGrams}}</label>
+      <input type="text" [attr.placeholder]="'adminPanel.changeProduct.currentAmount' | translate" formControlName="amountInGrams">
+
+      <label>{{'adminPanel.changeProduct.currentProteinPerPortion' | translate}}: {{product.proteinPerPortion}}</label>
+      <input type="text" [attr.placeholder]="'adminPanel.changeProduct.currentProteinPerPortion' | translate" formControlName="proteinPerPortion">
+
+      <button type="submit" [disabled]="!this.changeProductForm.valid">{{'adminPanel.changeProduct.change' | translate}}</button>
+      <p>{{errorMessage}}</p>
+
+    </form>
+  }
+</div>

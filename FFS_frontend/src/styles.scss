@@ -1,0 +1,114 @@
+$primary: #FF7B00;
+$secondary: #D95300;
+$primary-dark: #bf6200;
+$primary-very-dark: #7e3f00;
+$primary-light: #ffa64d;
+$primary-very-light: #ffca9c;
+$white: #fff;
+$black: #000;
+$gray: #838383;
+$light-gray: #bcbcbc;
+$gray-dark: #303030;
+$success: #029a02;
+$background: #ededed;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  color: $black;
+  background-color: $background;
+}
+
+ul {
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin button-styles {
+  min-width: 6rem;
+  padding: 0.5rem 1rem;
+  background-color: $primary-dark;
+  color: $white;
+  border-radius: 0.5rem;
+  border: none;
+  font: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+
+  &:hover:not(:disabled) {
+    background-color: $secondary;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:disabled {
+    background-color: $success;
+    opacity: 0.8;
+    cursor: not-allowed;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  width: 100%;
+
+  input {
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.3rem;
+  }
+
+  button {
+    @include button-styles;
+    width: 15rem;
+    height: 2.5rem;
+  }
+}
+
+.button {
+  @include button-styles;
+}
+
+.titleClass{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1rem;
+  font: inherit;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, $primary, $secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  letter-spacing: 2px; /* Ruimte tussen de letters */
+  text-transform: uppercase; /* Maakt het krachtiger */
+}
+
+.subtitleClass{
+  background: linear-gradient(90deg, $primary, $secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}

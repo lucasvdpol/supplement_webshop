@@ -1,0 +1,75 @@
+{
+  "homepage": {
+    "adminPanel": "Admin Panel",
+    "allProducts": "All Products",
+    "category": "Categories",
+    "searchBar": "Search Products..."
+  },
+  "shoppingcart":{
+    "shoppingcartText": "Your shopping cart is empty!",
+    "order": "Order"
+  },
+  "order": {
+    "orderText": "Order",
+    "orderDetails": "Order Details",
+    "delivery": "Delivery",
+    "firstname": "Firstname",
+    "lastname": "Lastname",
+    "address": "Street and housenumber",
+    "city": "City",
+    "products": "Products",
+    "emptyCart": "Add products to order them!",
+    "sentTo": "Sent to: ",
+    "orderDate": "Order from: ",
+    "total": "Total: ",
+    "finishedOrder": {
+      "h1": "Thank you very much for your order!",
+      "p": "If you have an account you can view your orders there."
+    }
+  },
+  "product": {
+    "text": "Products",
+    "addToCart": "Add to Cart",
+    "addedToCart": "Added to Cart",
+    "size": "Size",
+    "portions": "Portions",
+    "proteinPerPortion": "Protein per portion",
+    "ingredients": "Ingredients"
+  },
+  "account": {
+    "logOut": "Log out",
+    "orders": "Orders"
+  },
+  "adminPanel": {
+    "header": "Admin Panel",
+    "changeProduct":{
+      "pick": "Choose a product",
+      "text": "Change Product",
+      "currentTaste": "Taste ",
+      "currentBrand": "Brand ",
+      "currentCategory": "Category ",
+      "currentPrice": "Price ",
+      "currentUrl": "URL ",
+      "currentStock": "Stock ",
+      "currentIngredients": "Ingredients ",
+      "currentAmount": "Weight ",
+      "currentProteinPerPortion": "Protein Per Scoop ",
+      "change": "Change"
+    },
+    "addCategory": {
+      "text": "Add new Category",
+      "name": "Name of the new Category",
+      "category": "Category",
+      "create": "Create"
+    },
+    "removeProduct": {
+      "text": "Remove Product",
+      "confirm": "I confirm that I want to remove this product",
+      "delete": "Remove"
+    },
+      "addProduct": {
+        "text": "Add Product"
+
+    }
+  }
+}

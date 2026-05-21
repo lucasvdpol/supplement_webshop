@@ -1,0 +1,12 @@
+<app-nav (productChange)="filterByCategory($event)" [allNav]="true"/>
+
+<h1 class="titleClass">{{"product.text" | translate}}</h1>
+<div>
+  <ul>
+    @for (product of shownProducts(); track product.id){
+      <li>
+        <app-product [product]="product" class="products" [hideButton]="false" [isButtonDisabled]="isButtonDisabled(product.id)"/>
+      </li>
+    }
+  </ul>
+</div>

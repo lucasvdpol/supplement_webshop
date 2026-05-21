@@ -1,0 +1,30 @@
+<header>
+  @if(allNav){
+    <div class="text-container">
+      <button (click)="onAdminPanel()" [hidden]="!hideAdminPanel()">{{ 'homepage.adminPanel' | translate }}</button>
+      <button (click)="onProductChange('All')">{{'homepage.allProducts' | translate}}</button>
+      <div class="categories-dropdown">
+        <div class="category-button">
+          <button class="categories-button" >{{'homepage.category' | translate}}</button>
+          <p class="arrow">⮝</p>
+        </div>
+        <div class="dropdown-content">
+          @for(category of categories(); track category.id){
+            <button (click)="onProductChange(category.name)">{{category.name}}</button>
+          }
+        </div>
+      </div>
+    </div>
+  }
+  <div class="nav-container">
+    @if(searchbar){
+      <app-searchbar></app-searchbar>
+    }
+
+    @if(logOutText){
+      <button (click)="logout()">{{'account.logOut' | translate}}</button>
+    }
+  </div>
+</header>
+
+

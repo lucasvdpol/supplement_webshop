@@ -1,0 +1,8 @@
+<h1 class="titleClass">{{'adminPanel.changeProduct.pick' | translate}}</h1>
+<ul>
+  @for (product of products(); track product.id){
+    <li class="products">
+      <app-change-product-card [product]="product" [deleted]="true"></app-change-product-card>
+    </li>
+  }
+</ul>

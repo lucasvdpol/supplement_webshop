@@ -1,0 +1,9 @@
+<h1 class="titleClass">{{'adminPanel.addCategory.text' | translate}}</h1>
+<div class="form">
+  <form [formGroup]="addCategoryForm" (ngSubmit)="onAddCategory()">
+    <label>{{'adminPanel.addCategory.name' | translate}}</label>
+    <input type="text" [attr.placeholder]="'adminPanel.addCategory.category' | translate" formControlName="category">
+    <button [disabled]="!this.addCategoryForm.valid">{{'adminPanel.addCategory.create' | translate}}</button>
+    <p>{{message}}</p>
+  </form>
+</div>

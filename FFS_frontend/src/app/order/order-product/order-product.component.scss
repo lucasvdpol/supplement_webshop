@@ -1,0 +1,64 @@
+@use '../../../styles.scss' as *;
+
+.product-card {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: row;
+  width: fit-content;
+  min-width: 21rem;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  margin: 0.1rem;
+  p{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    color: black;
+    margin: 0;
+    font-size: 1.2rem;
+
+  }
+  img{
+    width: auto;
+    object-fit: contain;
+    border-radius: 0.2rem;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    max-height: 3rem;
+    margin-right: 1rem;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  .subtotal{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+}
+
+@media(max-width:720px){
+  .product-card {
+    max-width: 13rem;
+    min-width: 13rem;
+    p{
+      font-size: 1rem;
+    }
+    .info{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+
+
+
+

@@ -1,0 +1,52 @@
+<h1 class="titleClass">{{"order.orderText" | translate}}</h1>
+<div>
+  <div class="details">
+    <div class="form">
+      <h2>{{'order.orderDetails' | translate}}</h2>
+      <form [formGroup]="orderForm" (ngSubmit)="orderProducts()">
+        <p>Contact</p>
+        <input type="text" placeholder="Email" formControlName="email">
+        @if (email?.touched && email?.invalid) {
+          <small>Voer een geldig emailadress in!</small>
+        }
+        <p>{{'order.delivery' | translate}}</p>
+        <div class="row">
+          <input type="text" [attr.placeholder]="'order.firstname' | translate" formControlName="firstname">
+          <input type="text" [attr.placeholder]="'order.lastname' | translate" formControlName="lastname">
+        </div>
+        <input type="text" [attr.placeholder]="'order.address' | translate" formControlName="address">
+        <div class="row">
+          <input type="text" placeholder="Postcode" formControlName="postcode">
+          <input type="text" [attr.placeholder]="'order.city' | translate" formControlName="city">
+        </div>
+        @if (postcode?.touched && city?.touched) {
+          @if (postcode?.invalid || city?.invalid) {
+            <small>Voer een geldige postcode en stad in!</small>
+          }
+        }
+        <button
+          type="submit"
+          [disabled]="!orderForm.valid || this.shoppingCartItems().length == 0">
+          {{'order.orderText' | translate}}</button>
+      </form>
+    </div>
+    <div class="products">
+      <h2>{{'order.products' | translate}}</h2>
+      <div class="product-list">
+        @for(product of shoppingCartItems(); track product.id){
+          <ul>
+            <li>
+              <app-shopping-cart-product [product]="product"/>
+            </li>
+          </ul>
+        }
+      </div>
+      @if (this.shoppingCartItems().length != 0) {
+        <p id="price">€{{totalPrice().toFixed(2)}}</p>
+      }
+      @else{
+        <p>{{'order.emptyCart' | translate}}</p>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+@use '../../../../styles.scss' as *;
+
+.remove-product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  .delete-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    .button:disabled{
+      background-color: $gray;
+    }
+
+  }
+}

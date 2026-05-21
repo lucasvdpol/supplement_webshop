@@ -1,0 +1,31 @@
+@if(this.product){
+  <div class="productdetail">
+    <img [src]="imagePath"
+         [alt]="product.category.name + ' met de smaak ' + product.taste">
+    <div class="info">
+      <h2 class="title">{{product.category.name}}</h2>
+      <p>{{product.taste}}</p>
+      <p>€{{calculatePrice()}}</p>
+      <div class="buttons">
+        <button class="button" (click)="onRemoveProduct()">-</button>
+        <p>{{productAmount}}</p>
+        <button class="button" (click)="onAddProduct()">+</button>
+      </div>
+      <button class="button" (click)="onAddingShoppingCart(this.product)" [disabled]="isButtonDisabled">
+        {{(isButtonDisabled ? 'product.addedToCart' : 'product.addToCart') | translate }}
+      </button>
+    </div>
+    <div class="info">
+      <h2>{{'product.size' | translate}}</h2>
+      <p>{{product.amountInGrams}}g</p>
+      <p>{{'product.portions' | translate}}: {{this.portions}}</p>
+      @if(product.proteinPerPortion != 0){
+        <p>{{product.proteinPerPortion}}g {{'product.proteinPerPortion' | translate}}</p>
+      }
+      <div class="ingredients">
+        <h2>{{'product.ingredients' | translate}}</h2>
+        <p>{{this.product.ingredients}}</p>
+      </div>
+    </div>
+  </div>
+}

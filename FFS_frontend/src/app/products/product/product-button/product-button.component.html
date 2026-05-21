@@ -1,0 +1,6 @@
+<button [disabled]="isButtonDisabled"
+        [ngClass]="{'disabled-button': isButtonDisabled, 'enabled-button': !isButtonDisabled}"
+        (click)="onAddingShoppingCart(this.product)"
+        [hidden]="hideButton">
+  {{buttonValue | translate}}
+</button>

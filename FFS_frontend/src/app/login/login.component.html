@@ -1,0 +1,19 @@
+<div class="loginForm">
+  <h2>Inloggen</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <input type="text" name="email" placeholder="Email" formControlName="email">
+    <div class="password">
+      <input [type]="showPassword ? 'text' : 'password'"
+             name="password"
+             placeholder="Wachtwoord"
+             formControlName="password">
+      <button type='button' (click)="toggleShowPassword()">
+        <img src= "assets/passwordeye.png" alt="Visibility eye password">
+      </button>
+    </div>
+    <p [hidden]="hideError">Email en wachtwoord zijn niet juist. Probeer opnieuw of registreer een account.</p>
+    <button type="submit">Inloggen</button>
+    <p>Of</p>
+    <button (click)="onRegister()">Registreren</button>
+  </form>
+</div>

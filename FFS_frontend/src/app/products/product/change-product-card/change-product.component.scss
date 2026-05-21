@@ -1,0 +1,33 @@
+@use '../../../../styles.scss' as *;
+
+button{
+  background-color: $primary;
+  margin: 0.5rem;
+
+  &:hover{
+    cursor: pointer;
+    background-color: $secondary;
+  }
+  .product{
+    display: flex;
+    flex-direction: row;
+    min-width: 14rem;
+    justify-content: center;
+    align-items: center;
+
+
+    img{
+      object-fit: contain;
+      max-height: 6rem;
+    }
+
+    p{
+      font: inherit;
+      font-weight: bold;
+    }
+
+    .info{
+      min-width: 5rem;
+    }
+  }
+}

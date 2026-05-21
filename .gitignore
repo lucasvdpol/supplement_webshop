@@ -1,0 +1,17 @@
+# IDE & System
+.idea/
+.vscode/
+.DS_Store
+*.iml
+
+# Java Build
+target/
+build/
+*.class
+*.jar
+
+# Environment
+.env
+
+# Logs/Misc
+*.log

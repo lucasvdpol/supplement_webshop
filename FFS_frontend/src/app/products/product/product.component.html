@@ -1,0 +1,11 @@
+<button class="product-item" (click)="onSelectProduct($event)">
+  <img [src]="imagePath"
+       [alt]="product.category.name + ' met de smaak ' + product.taste"/>
+  <div class="info">
+    <p>{{product.category.name}}</p>
+    <p>{{product.taste}}</p>
+    <p>{{product.brand}}</p>
+    <p>€{{product.price.toFixed(2)}}</p>
+  </div>
+  <app-product-button [product]="product" [hideButton]="hideButton" (click)="onAddToCart($event)"/>
+</button>

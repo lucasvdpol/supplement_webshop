@@ -1,0 +1,127 @@
+@use '../../../styles.scss' as *;
+
+.product-card {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  width: fit-content;
+  min-width: 20rem;
+  //margin: 0.3rem;
+  background-color: white;
+  padding: 0.5rem;
+  max-height: 4rem;
+  font-size: 1rem;
+  font-style: inherit;
+  .buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 0.5rem;
+    margin-left: auto;
+    .button{
+      min-width: 1.5rem;
+      gap: 0.2rem;
+      margin: 0.1rem;
+      max-height: fit-content;
+      padding: 0;
+    }
+    p{
+      min-width: 2rem;
+      margin-right: 0;
+    }
+  }
+  p{
+    padding: 0;
+    object-fit: contain;
+    color: black;
+    margin-right: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    white-space: nowrap;
+    max-width: 6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  img{
+    width: auto;
+    object-fit: contain;
+    border-radius: 0.2rem;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    max-height: 3rem;
+    margin-right: 1rem;
+  }
+  .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+  }
+  .remove-button{
+    position: absolute;
+    object-fit: contain;
+    top: 0;
+    right: 0;
+    button{
+      background: transparent;
+      border: none;
+      font-size: 1rem;
+      &:hover{
+        cursor: pointer;
+        font-weight: bold;
+      }
+    }
+  }
+  .infoandbuttons{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+#shoppingcartbutton{
+  font: inherit;
+  background: transparent;
+  border-radius: 0.2rem;
+  box-shadow: none;
+  border: none;
+  margin-bottom: 0.01rem;
+  padding: 0.2rem;
+
+  &:hover{
+    cursor: pointer;
+    background: $secondary
+  }
+
+}
+
+@media(max-width: 720px){
+  .product-card{
+    flex-direction: row;
+    max-width: 16rem;
+    min-width: 16rem;
+    max-height: fit-content;
+
+    img{
+      max-height: 5rem;
+    }
+    .infoandbuttons{
+      flex-direction: column;
+      .buttons{
+        justify-content: center;
+        margin: 0;
+        .button{
+        }
+      }
+
+      .info{
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+
+

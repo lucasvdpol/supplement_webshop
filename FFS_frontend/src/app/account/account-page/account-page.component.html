@@ -1,0 +1,28 @@
+<app-nav [allNav]="false"
+         [logOutText]="true"
+         [shoppingCartPage]="true"
+         [searchbar]="false">
+
+</app-nav>
+<div class="orders">
+  <h1 class="titleClass">{{'account.orders' | translate}}</h1>
+  <ul>
+    @for (order of orders(); track order.id) {
+        <div class="order">
+          <div class="top">
+            <li>
+              <app-order-card [order]="order"/>
+            </li>
+            <div class="products">
+              @for (orderline of order.orderLines; track orderline.orderId) {
+                <app-order-product [orderline]="orderline" ></app-order-product>
+              }
+            </div>
+          </div>
+          <div class="details">
+            <app-order-detail [order]="order"></app-order-detail>
+          </div>
+        </div>
+    }
+  </ul>
+</div>

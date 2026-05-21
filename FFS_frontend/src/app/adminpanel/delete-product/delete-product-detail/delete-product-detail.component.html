@@ -1,0 +1,25 @@
+<h1 class="titleClass">{{'adminPanel.removeProduct.text' | translate}}</h1>
+<div class="remove-product">
+@if(this.product){
+  <div class="delete-product">
+    <app-product
+      [product]="product"
+      [hideButton]="true"
+      [isButtonDisabled]="false">
+    </app-product>
+    <div>
+      <label>
+        <input type="checkbox" [formControl]="confirmCheckbox">
+        {{'adminPanel.removeProduct.confirm' | translate}}
+      </label>
+    </div>
+
+    <button class="button"
+            (click)="onDeleteProduct()"
+            [disabled]="!confirmCheckbox.value">
+      {{'adminPanel.removeProduct.delete' | translate}}
+    </button>
+    <p>{{message}}</p>
+  </div>
+}
+</div>

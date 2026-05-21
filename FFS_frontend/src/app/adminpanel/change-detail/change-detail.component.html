@@ -1,0 +1,28 @@
+@if(this.product){
+  <h2>Product Aanpassen</h2>
+  <form [formGroup]="changeForm" (ngSubmit)="onChange()">
+    <label>Huidge smaak: {{product.taste}}</label>
+    <input type="text" placeholder="Smaak" formControlName="taste">
+
+    <label>Huidig merk: {{product.brand}}</label>
+    <input type="text" placeholder="Merk" formControlName="brand">
+
+    <label>Huidge categorie: {{product.category.name}}</label>
+    <input type="text" placeholder="categorie" formControlName="category">
+
+    <label>Huidge prijs: {{product.price}}</label>
+    <input type="text" placeholder="Prijs" formControlName="price">
+
+    <label>Huidge URL: {{product.url}}</label>
+    <input type="text" placeholder="URL" formControlName="url">
+
+    <label>Huidge voorraad: {{product.stock}}</label>
+    <input type="text" placeholder="Voorraad" formControlName="stock">
+
+    <button type="submit">Aanpassen</button>
+    <p>{{errorMessage}}</p>
+
+  </form>
+
+  <button (click)="onChange()"></button>
+}

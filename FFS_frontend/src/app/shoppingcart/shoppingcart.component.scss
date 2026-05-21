@@ -1,0 +1,85 @@
+@use '../../styles' as *;
+
+
+.shoppingcart {
+  position: relative;
+  display: inline-block;
+  z-index: 1000;
+  font-size: 1rem;
+
+  .shopping-cart-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+
+    img {
+      max-height: 2rem;
+      object-fit: contain;
+    }
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: $primary;
+    min-width: 15rem;
+    border-radius: 0.2rem;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    padding: 0.5rem;
+    margin: 0;
+    ul {
+      padding: 0;
+      max-height: 15rem;
+      overflow: scroll
+
+    }
+    p{
+      font: inherit;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      padding: 0;
+      color: black;
+
+    }
+    button{
+      margin: 0;
+    }
+  }
+  &:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.cart-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: red;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(50%, -50%);
+}
+
+@media (max-width: 800px) {
+  .shoppingcart{
+    &:hover .dropdown-content{
+      display: none;
+    }
+  }
+}
+

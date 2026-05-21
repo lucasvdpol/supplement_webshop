@@ -1,0 +1,27 @@
+<div class="shoppingcart">
+  <button class="shopping-cart-button" (click)="onOrder()">
+    <img src="../../assets/shopping-cart.png" alt="Shopping cart image">
+    @if(shoppingCartItems().length > 0){
+      <span class="cart-count">
+      {{ this.getTotalItemCount() }}
+      </span>
+    }
+  </button>
+  <div class="dropdown-content">
+    <ul>
+      @for(product of shoppingCartItems(); track product.id){
+        <li>
+          <app-shopping-cart-product [product]="product" (removeItem)="isButtonDisabled($event)"/>
+        </li>
+      }
+    </ul>
+    @if(this.shoppingCartItems().length > 0){
+      <p>€{{totalPrice().toFixed(2)}}</p>
+      <button (click)="onOrder()" class="button">
+        {{'shoppingcart.order' | translate}}
+      </button>
+    }@else{
+      <p>{{'shoppingcart.shoppingcartText' | translate}}</p>
+    }
+  </div>
+</div>

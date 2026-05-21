@@ -1,0 +1,16 @@
+<header>
+  <button (click)="goToHomePage()">
+    <img [src]="logoImage" alt="Logo image">
+  </button>
+  <div class="header-component">
+    <h1>NutroX</h1>
+    <p>Boost. Perform. Dominate</p>
+  </div>
+  <div class="accountandshopping">
+    <button (click)="switchLanguage()">
+      <img [src]="currentFlag()" alt="Country flag english or dutch" class="flag">
+    </button>
+    <app-shoppingcart></app-shoppingcart>
+    <app-account></app-account>
+  </div>
+</header>

@@ -1,0 +1,20 @@
+<button id="shoppingcartbutton" (click)="onSelectProduct($event)">
+  <div class="product-card">
+    <img [src]="imagePath"
+         [alt]="product.taste"/>
+    <div class="infoandbuttons">
+      <div class="info">
+        <p>{{product.taste}}</p>
+        <p>€{{product.price.toFixed(2)}}</p>
+      </div>
+      <div class="buttons">
+        <button (click)="onProductRemove($event)" class="button">-</button>
+        <p>{{product.amount}}</p>
+        <button (click)="onProductAdd($event)" class="button">+</button>
+      </div>
+    </div>
+    <div class="remove-button">
+      <button (click)="onProductDestroy($event)">x</button>
+    </div>
+  </div>
+</button>

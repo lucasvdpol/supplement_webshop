@@ -1,0 +1,19 @@
+<div class="details">
+  <h2>Registreren</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+    <input type="text" placeholder="Email" formControlName="email">
+    <div class="password">
+      <input [type]="showPassword ? 'text' : 'password'"
+             name="password"
+             placeholder="Wachtwoord"
+             formControlName="password">
+      <button type='button' (click)="toggleShowPassword()">
+        <img src= "assets/passwordeye.png" alt="Visibility eye password">
+      </button>
+    </div>
+    <button type="submit">Registreren</button>
+    <p>{{errorMessage}}</p>
+
+  </form>
+
+</div>

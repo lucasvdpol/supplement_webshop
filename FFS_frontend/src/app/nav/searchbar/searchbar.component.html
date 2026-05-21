@@ -1,0 +1,8 @@
+<input
+  type="text"
+  [attr.placeholder]="'homepage.searchBar' | translate"
+  [(ngModel)]="searchQuery"
+  (input)="onSearch()"
+  class="search-bar"
+/>
+

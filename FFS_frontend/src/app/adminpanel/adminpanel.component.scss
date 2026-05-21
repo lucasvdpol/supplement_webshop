@@ -1,0 +1,9 @@
+.adminpanel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .button{
+    min-width:15rem;
+  }
+}
