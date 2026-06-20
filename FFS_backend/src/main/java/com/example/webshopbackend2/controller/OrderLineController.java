@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping({"/orderline"})
 @CrossOrigin(
-        origins = {"http://localhost:4200", "http://s1156206.student.inf-hsleiden.nl:16206"}
+        origins = {"http://localhost:4200", "http://s1156206.student.inf-hsleiden.nl:16206", "https://webshop.lucasvandepol.com"}
 )
 public class OrderLineController {
     private OrderLineDAO orderLineDAO;
